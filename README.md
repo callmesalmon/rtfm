@@ -36,3 +36,8 @@ echo "Hello World"
 groff main.1
 gcc main.1
 ```
+Then compile with the command `rtfm` and you're good to go:
+```console
+rtfm
+```
+Manual generated!
