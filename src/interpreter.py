@@ -6,9 +6,9 @@ from indata import indata
 from tool import Tool, TOOLS
 import os
 
-tooling: any = Tool(TOOLS, "roff") # Assume roff as it is 
-                                   # the most popular.
-tooling.save("rtfm.tool")
+tooling: any = Tool(TOOLS, "roff", "rtfm.tool") # Assume roff as it is 
+                                                # the most popular.
+tooling.save()
 
 def mantool_match(_mantool: str) -> str:
     _mantool_valid: bool = False
@@ -37,7 +37,7 @@ def recipe_match(
         case "use":
             if (mantool_match(_main) != "NULL"):
                 tooling.tool = TOOLS[_main]
-                tooling.save("rtfm.tool")
+                tooling.save()
         case _:
             print("-rtfm: ERROR. Read the fucking manual.")
 
