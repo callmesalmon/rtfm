@@ -8,6 +8,7 @@ import os
 
 tooling: any = Tool(TOOLS, "roff") # Assume roff as it is 
                                    # the most popular.
+tooling.save("rtfm.tool")
 
 def mantool_match(_mantool: str) -> str:
     _mantool_valid: bool = False
@@ -30,12 +31,13 @@ def recipe_match(
         case "tool":
             tooling.tooling_list[_main_split[0]] = " ".join(_main_split[1:])
         case "build":
-            _cmd: str = f"{tooling.tool} {_main}"
+            _cmd: str = f"{tooling.get()} {_main}"
             os.system(_cmd)
             print(f"-rtfm: build returned {os.system(_cmd)}")
         case "use":
             if (mantool_match(_main) != "NULL"):
                 tooling.tool = TOOLS[_main]
+                tooling.save("rtfm.tool")
         case _:
             print("-rtfm: ERROR. Read the fucking manual.")
 

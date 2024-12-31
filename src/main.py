@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from os import listdir
+from os import listdir, remove
 pwd = listdir(".")
 
 from sys import argv
@@ -21,7 +21,10 @@ DESCRIPTION: RTFM is a program made to generate
              \"Read The fucking Manual\".
 USAGE: rtfm <flags>
 FLAGS:
-    -h, --help: Print this message"""
+    -h, --help: Print this message
+    -S, --Save: Save all tmp files"""
+
+SAVE_FLAGS: list[str] = ["-S", "--Save"]
 
 def cfg_exists() -> bool:
     cfg: bool = False
@@ -45,6 +48,8 @@ def main() -> None:
     if argv[1] in HELP_FLAGS:
         print(HELP_MSG)
         return
+    if not argv[1] in SAVE_FLAGS:
+        remove("rtfm.tool")
         
 if __name__ == "__main__":
     main()
