@@ -20,13 +20,13 @@ touch rtfm.cfg
 Open it. RTFM operates by using a YAML-like configuration (tough I built this parser from
 scratch, so it's much worse than say, libyaml3). This is an example:
 ```yaml
-def console:
+console:
     cmd: echo "Hello World"
-def building:
+building:
     use: roff
     build: main.1
-def tooling:
-    tool: mytool gcc
+tooling:
+    tool: mytool troff
     use: mytool
     build: main.1
 ```
@@ -34,7 +34,7 @@ This will eventually run:
 ```console
 echo "Hello World"
 groff main.1
-gcc main.1
+troff main.1
 ```
 Then compile with the command `rtfm` and you're good to go:
 ```console

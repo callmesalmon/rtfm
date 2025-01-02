@@ -12,8 +12,8 @@ class indata:
         self.data: dict[str] = {}
         recipe_name: str = ""
         for ln in self.raw:
-            if ln.startswith("def "):
-                recipe_name: str = ln.rstrip(":").lstrip("def ").rstrip(":\n")
+            if not ln.startswith("    "):
+                recipe_name: str = ln.rstrip(":").rstrip(":\n")
                 self.data[recipe_name] = {}
             if ln.startswith("    ") and not recipe_name.lstrip(" ") == "":
                 self.data[recipe_name][ln.lstrip("    ").split(" ")[0].rstrip(":")] = \
