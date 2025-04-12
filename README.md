@@ -5,17 +5,17 @@ even worse.
 
 ## Install
 ```console
-git clone https://github.com/ElisStaaf/rtfm
+git clone https://github.com/callmesalmon/rtfm
 cd rtfm
 ./install.sh
 ```
 
 ## How to
 RTFM operates by using a configuration file, kind of like `make`!
-The configuration file is called `rtfm.cfg`, so we can start of
+The configuration file is called `rtfm.yml`, so we can start of
 with creating that:
 ```console
-touch rtfm.cfg
+touch rtfm.yml
 ```
 Open it. RTFM operates by using a YAML-like configuration (tough I built this parser from
 scratch, so it's much worse than say, libyaml3). This is an example:
@@ -40,4 +40,11 @@ Then compile with the command `rtfm` and you're good to go:
 ```console
 rtfm
 ```
-Manual generated!
+Manual generated! There are also examples included in the repo
+which you can run with:
+
+```sh
+cd examples
+sudo rtfm
+man rtfm-test
+```

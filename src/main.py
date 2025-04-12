@@ -29,7 +29,7 @@ SAVE_FLAGS: list[str] = ["-S", "--Save"]
 def cfg_exists() -> bool:
     cfg: bool = False
     for file in pwd:
-        if file == f"rtfm.cfg":
+        if file == f"rtfm.yml":
             cfg = True
     return cfg
         
@@ -37,7 +37,7 @@ def build_man() -> int:
     if not cfg_exists():
         print(NOCFG_ERROR_MSG)
         return NOCFG_ERROR_CODE
-    PORT_IN: any = indata(f"rtfm.cfg")
+    PORT_IN: any = indata(f"rtfm.yml")
     interpret(PORT_IN.data)
     return 0
 

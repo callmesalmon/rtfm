@@ -1,0 +1,4 @@
+# RTFM Tooling
+#rtfm.*
+rtfm.tool
+!rtfm.yml
