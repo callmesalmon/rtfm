@@ -9,8 +9,8 @@ argc = len(argv)
 from indata import indata
 from interpreter import interpret
 
-NOCFG_ERROR_MSG: str = """-rtfm: rtfm.cfg doesn't exist!
-Please create an rtfm.cfg an configure rtfm to continue.
+NOCFG_ERROR_MSG: str = """-rtfm: rtfm.yml doesn't exist!
+Please create an rtfm.yml and configure rtfm to continue.
 Type -h or --help for more information on rtfm."""
 NOCFG_ERROR_CODE = 1
 
