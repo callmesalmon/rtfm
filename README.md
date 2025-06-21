@@ -40,11 +40,13 @@ Then compile with the command `rtfm` and you're good to go:
 ```console
 rtfm
 ```
-Manual generated! There are also examples included in the repo
-which you can run with:
+Manual generated! You can also compile the rtfm manual with rtfm
+using:
 
 ```sh
 cd examples
-sudo rtfm
-man rtfm-test
+sudo rtfm # Presuming /usr/local/man/man1 exists
+man rtfm
 ```
+
+Or by just running ``install-man.sh``.

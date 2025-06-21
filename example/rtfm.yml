@@ -1,6 +1,0 @@
-man:
-    use: roff
-    build: main.1 /usr/local/man/man1
-man2:
-    use: man
-    build: main.1 /usr/local/man/man1

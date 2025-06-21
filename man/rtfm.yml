@@ -1,0 +1,6 @@
+man:
+    use: roff
+    build: rtfm.1 /usr/local/man/man1
+man2:
+    use: man
+    build: rtfm.1 /usr/local/man/man1
