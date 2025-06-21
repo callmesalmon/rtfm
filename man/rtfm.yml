@@ -1,6 +1,6 @@
-man:
+roff-build:
     use: roff
     build: rtfm.1 /usr/local/man/man1
-man2:
+man-install:
     use: man
     build: rtfm.1 /usr/local/man/man1

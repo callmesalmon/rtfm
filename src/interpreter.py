@@ -33,7 +33,7 @@ def recipe_match(
         case "build":
             _cmd: str = f"{tooling.get()} {_main}"
             os.system(_cmd)
-            print(f"-rtfm: build returned {os.system(_cmd)}")
+            print(f"-rtfm: build for {_proc} returned {os.system(_cmd)}.")
         case "use":
             if (mantool_match(_main) != "NULL"):
                 tooling.tool = TOOLS[_main]
